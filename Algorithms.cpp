@@ -345,7 +345,6 @@ bool Algorithms::isConnected(const Graph& g) {
     return true;
 }
 
-
 void Algorithms::dfs(const Graph& g, size_t node, vector<bool>& visited, size_t n) {
     visited[node] = true;
     for (size_t i = 0; i < n; ++i) {

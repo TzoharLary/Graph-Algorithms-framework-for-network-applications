@@ -1,8 +1,11 @@
 #!make -f
 
+# i change the clang compiler to ensure that all C++ support and libraries are automatically loaded.
 CXX=clang++
+# c++11: use the C++11 standard.
+# -Werror: Treat all compiler warnings as errors.
 CXXFLAGS=-std=c++11
-#  -Werror -Wsign-conversion
+# Check for full memory leaks, Show all types of memory leaks, and Exit with exit code 99 in case of memory leak.
 VALGRIND_FLAGS=-v --leak-check=full --show-leak-kinds=all  --error-exitcode=99
 
 SOURCES=Graph.cpp Algorithms.cpp 

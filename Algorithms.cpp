@@ -1,7 +1,6 @@
 // Mail: tzohary1234@gmail.com
 // Author: Tzohar Lary
 
-
 #include "Algorithms.hpp"
 #include <queue>
 #include <limits>

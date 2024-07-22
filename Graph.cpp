@@ -14,11 +14,6 @@ void Graph::loadGraph(const vector<vector<int>>& matrix) {
         throw invalid_argument("Graph is empty");
     }
     size_t size = matrix.size();
-    // for (const auto& row : matrix) {
-    //     if (row.size() != size) {
-    //         throw invalid_argument(" Matrix must be square and non-empty");
-    //     }
-    // }
     adjacencyMatrix = matrix;
 }
 

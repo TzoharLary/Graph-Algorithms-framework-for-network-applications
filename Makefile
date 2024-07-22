@@ -5,11 +5,14 @@ CXX=clang++
 # c++11: use the C++11 standard.
 # -Werror: Treat all compiler warnings as errors.
 CXXFLAGS=-std=c++11
-# Check for full memory leaks, Show all types of memory leaks, and Exit with exit code 99 in case of memory leak.
+# Check for full memory leaks, Show all types of memory leaks, and Exit with exit code 99 in case of memory leak.ma
 VALGRIND_FLAGS=-v --leak-check=full --show-leak-kinds=all  --error-exitcode=99
 
 SOURCES=Graph.cpp Algorithms.cpp 
 OBJECTS=$(subst .cpp,.o,$(SOURCES))
+
+# Default goal (will be executed if you run `make` without any target)
+all: $(OBJECTS)
 
 demo: Demo.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o demo

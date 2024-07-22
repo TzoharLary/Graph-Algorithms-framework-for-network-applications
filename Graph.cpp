@@ -136,12 +136,10 @@ bool Graph::operator==(const Graph& other) const {
     return adjacencyMatrix == other.adjacencyMatrix;
 }
 
-bool Graph::operator!=(const Graph& other) const {
-    return !(*this == other);
-}
-
 bool Graph::operator<(const Graph& other) const {
-    if (adjacencyMatrix.size() < other.adjacencyMatrix.size()) {
+    cout << "adjacencyMatrix.size() = " << adjacencyMatrix.size() << endl;
+    cout << "other.adjacencyMatrix.size() = " << other.adjacencyMatrix.size() << endl;
+    if (adjacencyMatrix.size() < other.adjacencyMatrix.size()) {  
         return true;
     }
     if (adjacencyMatrix.size() > other.adjacencyMatrix.size()) {
@@ -149,6 +147,11 @@ bool Graph::operator<(const Graph& other) const {
     }
     return adjacencyMatrix < other.adjacencyMatrix;
 }
+
+bool Graph::operator!=(const Graph& other) const {
+    return !(*this == other);
+}
+
 
 bool Graph::operator<=(const Graph& other) const {
     return *this < other || *this == other;

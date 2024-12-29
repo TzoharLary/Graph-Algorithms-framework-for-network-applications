@@ -137,8 +137,7 @@ bool Graph::operator==(const Graph& other) const {
 }
 
 bool Graph::operator<(const Graph& other) const {
-    cout << "adjacencyMatrix.size() = " << adjacencyMatrix.size() << endl;
-    cout << "other.adjacencyMatrix.size() = " << other.adjacencyMatrix.size() << endl;
+
     if (adjacencyMatrix.size() < other.adjacencyMatrix.size()) {  
         return true;
     }

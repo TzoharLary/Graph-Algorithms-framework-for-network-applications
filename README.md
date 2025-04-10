@@ -1,4 +1,4 @@
-# Systems Programming 2 - Task 2
+# Graph Algorithms framework for network applications
 
 ## Author:
 Tzohar Lary
